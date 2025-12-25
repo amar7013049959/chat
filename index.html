@@ -77,21 +77,35 @@
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
-</body>
+</body> <div class="chat-container">
+    <div class="chat-header">Tree Chat 🌳</div>
+
+    <div id="messages" class="chat-messages"></div>
+
+    <div class="chat-input">
+      <input id="messageInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- ✅ PART 2 SCRIPT START -->
   <script>
-  function sendMessage() {
-    const input = document.getElementById("messageInput");
-    const message = input.value;
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const message = input.value;
 
-    if (message.trim() === "") return;
+      if (message.trim() === "") return;
 
-    const msgDiv = document.createElement("div");
-    msgDiv.className = "message";
-    msgDiv.innerText = message;
+      const msgDiv = document.createElement("div");
+      msgDiv.className = "message";
+      msgDiv.innerText = message;
 
-    document.getElementById("messages").appendChild(msgDiv);
-    input.value = "";
-  }
-</script>
+      document.getElementById("messages").appendChild(msgDiv);
+      input.value = "";
+    }
+  </script>
+  <!-- ✅ PART 2 SCRIPT END -->
+
+</body>
 </html>
-
+</html>
