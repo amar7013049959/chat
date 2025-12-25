@@ -78,4 +78,20 @@
     </div>
   </div>
 </body>
+  <script>
+  function sendMessage() {
+    const input = document.getElementById("messageInput");
+    const message = input.value;
+
+    if (message.trim() === "") return;
+
+    const msgDiv = document.createElement("div");
+    msgDiv.className = "message";
+    msgDiv.innerText = message;
+
+    document.getElementById("messages").appendChild(msgDiv);
+    input.value = "";
+  }
+</script>
 </html>
+
